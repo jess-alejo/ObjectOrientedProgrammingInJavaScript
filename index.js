@@ -1,24 +1,19 @@
 function Circle(radius) {
+  let defaultLocation = { x: 0, y: 0 };
+  let computeOptimumLocation = function(factor) {
+    //...
+  };
+
   this.radius = radius;
+
   this.draw = function() {
+    computeOptimumLocation(0.1);
+    // defaultLocation
+    // this.radius
+
     console.log("draw");
   };
 }
 
 const circle = new Circle(10);
-
-// get all properties
-for (let key in circle) {
-  if (typeof circle[key] !== "function") {
-    console.log(key, circle[key]);
-  }
-}
-
-// another way of getting properties
-const keys = Object.keys(circle);
-console.log(keys);
-
-// has given property?
-if ("radius" in circle) {
-  console.log("Circle has a radius");
-}
+circle.draw();
